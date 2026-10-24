@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projects by Arbuznik: RF test automation, embedded systems, cross-platform apps, and practical developer tools.">
+  <meta name="theme-color" content="#f7f7f4">
+  <title>Arbuznik — Projects</title>
+  <style>
+    :root { color-scheme: light; --ink: #20211f; --muted: #666862; --line: #dedfd9; --paper: #f7f7f4; --link: #315f52; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .wrap { width: min(100% - 40px, 880px); margin: 0 auto; }
+    header { padding: 28px 0; border-bottom: 1px solid var(--line); }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .brand { color: var(--ink); font-weight: 700; text-decoration: none; letter-spacing: -.03em; }
+    nav { display: flex; gap: 20px; }
+    a { color: var(--link); text-underline-offset: 3px; }
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover, a:hover { text-decoration: underline; }
+    main { padding: 70px 0 80px; }
+    .intro { max-width: 700px; margin-bottom: 54px; }
+    h1 { margin: 0 0 14px; font-size: clamp(2.3rem, 7vw, 4rem); line-height: 1.08; letter-spacing: -.055em; }
+    .intro p { max-width: 620px; margin: 0; color: var(--muted); font-size: 1.12rem; }
+    .section-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 18px; }
+    h2 { margin: 0; font-size: 1.25rem; letter-spacing: -.02em; }
+    .section-head p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    article { display: flex; flex-direction: column; min-height: 190px; padding: 20px; border: 1px solid var(--line); background: #fff; }
+    article h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    article p { margin: 0 0 20px; color: var(--muted); font-size: .95rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; font-size: .92rem; }
+    .about { max-width: 680px; margin-top: 58px; padding-top: 25px; border-top: 1px solid var(--line); }
+    .about p { margin: 10px 0 0; color: var(--muted); }
+    footer { padding: 22px 0 34px; border-top: 1px solid var(--line); color: var(--muted); font-size: .9rem; }
+    footer a { color: inherit; }
+    @media (max-width: 620px) {
+      .wrap { width: min(100% - 32px, 880px); }
+      header { padding: 20px 0; }
+      nav { gap: 14px; }
+      main { padding: 52px 0 60px; }
+      .intro { margin-bottom: 38px; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 4px; }
+      .projects { grid-template-columns: 1fr; }
+      article { min-height: 0; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <a class="brand" href="/">Arbuznik</a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="https://github.com/abduznik">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="intro" aria-labelledby="intro-title">
+      <h1 id="intro-title">Things I’m building.</h1>
+      <p>Projects across RF test automation, embedded systems, cross-platform apps, and practical developer tools. Mostly tools I wanted to exist.</p>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <div class="section-head">
+        <h2 id="projects-title">Selected projects</h2>
+        <p>Open source unless noted otherwise.</p>
+      </div>
+      <div class="projects">
+        <article>
+          <h3>Freegosy</h3>
+          <p>A cross-platform Flutter client for self-hosted RomM libraries: browse and download games, launch emulators, and sync saves.</p>
+          <div class="links"><a href="https://abduznik.github.io/Freegosy/">Project site</a><a href="https://github.com/abduznik/Freegosy">Source</a></div>
+        </article>
+        <article>
+          <h3>Instrumation</h3>
+          <p>A Python hardware abstraction layer for RF test equipment, with SCPI control, PyVISA drivers, and digital-twin simulation.</p>
+          <div class="links"><a href="https://abduznik.github.io/instrumation/">Docs</a><a href="https://github.com/abduznik/instrumation">Source</a></div>
+        </article>
+        <article>
+          <h3>Portfolio Dumper</h3>
+          <p>A static web tool that turns GitHub profiles and repositories into clean, LLM-friendly Markdown.</p>
+          <div class="links"><a href="https://abduznik.github.io/portfolio-dumper/">Try it</a><a href="https://github.com/abduznik/portfolio-dumper">Source</a></div>
+        </article>
+        <article>
+          <h3>Bitbox</h3>
+          <p>A community-built collection of small Python command-line tools, designed for one-file contributions.</p>
+          <div class="links"><a href="https://github.com/abduznik/bitbox">Source</a></div>
+        </article>
+        <article>
+          <h3>RomM Droid Saves</h3>
+          <p>Back up and sync native Android game saves to a self-hosted RomM server with Shizuku; no root required.</p>
+          <div class="links"><a href="https://github.com/abduznik/rommdroid-saves">Source</a></div>
+        </article>
+        <article>
+          <h3>Kai Shelf</h3>
+          <p>A cross-platform manga and comics reader for self-hosted servers including Suwayomi, Komga, and Kavita.</p>
+          <div class="links"><a href="https://github.com/abduznik/kai-shelf">Source</a></div>
+        </article>
+        <article>
+          <h3>Stackarr</h3>
+          <p>A Flutter client for managing the self-hosted media stack, including Radarr, Sonarr, Lidarr, Prowlarr, and Bazarr.</p>
+          <div class="links"><a href="https://github.com/abduznik/stackarr">Source</a></div>
+        </article>
+        <article>
+          <h3>Git-Alchemist</h3>
+          <p>A command-line toolkit for rewriting, cleaning, and optimizing Git repositories.</p>
+          <div class="links"><a href="https://github.com/abduznik/Git-Alchemist">Source</a></div>
+        </article>
+        <article>
+          <h3>RP2040 Stream Deck</h3>
+          <p>Open-source USB Stream Deck firmware for RP2040, with configurable pins, a web configurator, and a desktop app.</p>
+          <div class="links"><a href="https://abduznik.github.io/rp2040-streamdeck/">Project site</a><a href="https://github.com/abduznik/rp2040-streamdeck">Source</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" aria-labelledby="about-title">
+      <h2 id="about-title">About</h2>
+      <p>I work across electronics and software, from RF test automation and embedded C to Flutter apps and small web tools. You can find the rest of my public work on <a href="https://github.com/abduznik?tab=repositories">GitHub</a>.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="wrap">Arbuznik · <a href="https://github.com/abduznik">GitHub profile</a></div>
+  </footer>
+</body>
+</html>
