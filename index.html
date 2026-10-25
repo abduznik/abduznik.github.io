@@ -4,18 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Projects by Arbuznik: RF test automation, embedded systems, cross-platform apps, and practical developer tools.">
-  <meta name="theme-color" content="#f7f7f4">
+  <meta name="theme-color" content="#111512">
   <title>Arbuznik — Projects</title>
   <style>
-    :root { color-scheme: light; --ink: #20211f; --muted: #666862; --line: #dedfd9; --paper: #f7f7f4; --link: #315f52; }
+    :root { color-scheme: dark; --ink: #e9eee9; --muted: #a4ada6; --line: #303a33; --paper: #111512; --surface: #191f1b; --link: #b5e3c3; --accent: #a9dfa9; --accent-border: #54735a; }
     * { box-sizing: border-box; }
     body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+    a { color: var(--link); text-underline-offset: 3px; }
+    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
     .wrap { width: min(100% - 40px, 880px); margin: 0 auto; }
     header { padding: 28px 0; border-bottom: 1px solid var(--line); }
     .top { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
     .brand { color: var(--ink); font-weight: 700; text-decoration: none; letter-spacing: -.03em; }
     nav { display: flex; gap: 20px; }
-    a { color: var(--link); text-underline-offset: 3px; }
     nav a { color: var(--muted); text-decoration: none; }
     nav a:hover, a:hover { text-decoration: underline; }
     main { padding: 70px 0 80px; }
@@ -26,9 +27,13 @@
     h2 { margin: 0; font-size: 1.25rem; letter-spacing: -.02em; }
     .section-head p { margin: 0; color: var(--muted); font-size: .92rem; }
     .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-    article { display: flex; flex-direction: column; min-height: 190px; padding: 20px; border: 1px solid var(--line); background: #fff; }
-    article h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    article { display: flex; flex-direction: column; min-height: 190px; padding: 20px; border: 1px solid var(--line); background: var(--surface); }
+    article.featured { border-color: var(--accent-border); }
+    .card-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
+    article h3 { margin: 0; font-size: 1.08rem; }
     article p { margin: 0 0 20px; color: var(--muted); font-size: .95rem; }
+    .stars { flex: none; padding: 2px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); font-size: .8rem; text-decoration: none; white-space: nowrap; }
+    .featured .stars { border-color: var(--accent-border); color: var(--accent); }
     .links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: auto; font-size: .92rem; }
     .about { max-width: 680px; margin-top: 58px; padding-top: 25px; border-top: 1px solid var(--line); }
     .about p { margin: 10px 0 0; color: var(--muted); }
@@ -67,53 +72,53 @@
     <section id="projects" aria-labelledby="projects-title">
       <div class="section-head">
         <h2 id="projects-title">Selected projects</h2>
-        <p>Open source unless noted otherwise.</p>
+        <p>Sorted by GitHub stars; counts are snapshots.</p>
       </div>
       <div class="projects">
-        <article>
-          <h3>Freegosy</h3>
+        <article class="featured">
+          <div class="card-heading"><h3>Freegosy</h3><a class="stars" href="https://github.com/abduznik/Freegosy/stargazers" aria-label="248 GitHub stars">248 stars</a></div>
           <p>A cross-platform Flutter client for self-hosted RomM libraries: browse and download games, launch emulators, and sync saves.</p>
           <div class="links"><a href="https://abduznik.github.io/Freegosy/">Project site</a><a href="https://github.com/abduznik/Freegosy">Source</a></div>
         </article>
-        <article>
-          <h3>Instrumation</h3>
+        <article class="featured">
+          <div class="card-heading"><h3>Portfolio Dumper</h3><a class="stars" href="https://github.com/abduznik/portfolio-dumper/stargazers" aria-label="108 GitHub stars">108 stars</a></div>
+          <p>A static web tool that turns GitHub profiles and repositories into clean, LLM-friendly Markdown.</p>
+          <div class="links"><a href="https://abduznik.github.io/portfolio-dumper/">Try it</a><a href="https://github.com/abduznik/portfolio-dumper">Source</a></div>
+        </article>
+        <article class="featured">
+          <div class="card-heading"><h3>Instrumation</h3><a class="stars" href="https://github.com/abduznik/instrumation/stargazers" aria-label="96 GitHub stars">96 stars</a></div>
           <p>A Python hardware abstraction layer for RF test equipment, with SCPI control, PyVISA drivers, and digital-twin simulation.</p>
           <div class="links"><a href="https://abduznik.github.io/instrumation/">Docs</a><a href="https://github.com/abduznik/instrumation">Source</a></div>
         </article>
         <article>
-          <h3>Portfolio Dumper</h3>
-          <p>A static web tool that turns GitHub profiles and repositories into clean, LLM-friendly Markdown.</p>
-          <div class="links"><a href="https://abduznik.github.io/portfolio-dumper/">Try it</a><a href="https://github.com/abduznik/portfolio-dumper">Source</a></div>
-        </article>
-        <article>
-          <h3>Bitbox</h3>
-          <p>A community-built collection of small Python command-line tools, designed for one-file contributions.</p>
-          <div class="links"><a href="https://github.com/abduznik/bitbox">Source</a></div>
-        </article>
-        <article>
-          <h3>RomM Droid Saves</h3>
-          <p>Back up and sync native Android game saves to a self-hosted RomM server with Shizuku; no root required.</p>
-          <div class="links"><a href="https://github.com/abduznik/rommdroid-saves">Source</a></div>
-        </article>
-        <article>
-          <h3>Kai Shelf</h3>
-          <p>A cross-platform manga and comics reader for self-hosted servers including Suwayomi, Komga, and Kavita.</p>
-          <div class="links"><a href="https://github.com/abduznik/kai-shelf">Source</a></div>
-        </article>
-        <article>
-          <h3>Stackarr</h3>
-          <p>A Flutter client for managing the self-hosted media stack, including Radarr, Sonarr, Lidarr, Prowlarr, and Bazarr.</p>
-          <div class="links"><a href="https://github.com/abduznik/stackarr">Source</a></div>
-        </article>
-        <article>
-          <h3>Git-Alchemist</h3>
+          <div class="card-heading"><h3>Git-Alchemist</h3><a class="stars" href="https://github.com/abduznik/Git-Alchemist/stargazers" aria-label="22 GitHub stars">22 stars</a></div>
           <p>A command-line toolkit for rewriting, cleaning, and optimizing Git repositories.</p>
           <div class="links"><a href="https://github.com/abduznik/Git-Alchemist">Source</a></div>
         </article>
         <article>
-          <h3>RP2040 Stream Deck</h3>
+          <div class="card-heading"><h3>Bitbox</h3><a class="stars" href="https://github.com/abduznik/bitbox/stargazers" aria-label="14 GitHub stars">14 stars</a></div>
+          <p>A community-built collection of small Python command-line tools, designed for one-file contributions.</p>
+          <div class="links"><a href="https://github.com/abduznik/bitbox">Source</a></div>
+        </article>
+        <article>
+          <div class="card-heading"><h3>RP2040 Stream Deck</h3><a class="stars" href="https://github.com/abduznik/rp2040-streamdeck/stargazers" aria-label="4 GitHub stars">4 stars</a></div>
           <p>Open-source USB Stream Deck firmware for RP2040, with configurable pins, a web configurator, and a desktop app.</p>
           <div class="links"><a href="https://abduznik.github.io/rp2040-streamdeck/">Project site</a><a href="https://github.com/abduznik/rp2040-streamdeck">Source</a></div>
+        </article>
+        <article>
+          <div class="card-heading"><h3>RomM Droid Saves</h3><a class="stars" href="https://github.com/abduznik/rommdroid-saves/stargazers" aria-label="1 GitHub star">1 star</a></div>
+          <p>Back up and sync native Android game saves to a self-hosted RomM server with Shizuku; no root required.</p>
+          <div class="links"><a href="https://github.com/abduznik/rommdroid-saves">Source</a></div>
+        </article>
+        <article>
+          <div class="card-heading"><h3>Kai Shelf</h3><a class="stars" href="https://github.com/abduznik/kai-shelf/stargazers" aria-label="0 GitHub stars">0 stars</a></div>
+          <p>A cross-platform manga and comics reader for self-hosted servers including Suwayomi, Komga, and Kavita.</p>
+          <div class="links"><a href="https://github.com/abduznik/kai-shelf">Source</a></div>
+        </article>
+        <article>
+          <div class="card-heading"><h3>Stackarr</h3><a class="stars" href="https://github.com/abduznik/stackarr/stargazers" aria-label="0 GitHub stars">0 stars</a></div>
+          <p>A Flutter client for managing the self-hosted media stack, including Radarr, Sonarr, Lidarr, Prowlarr, and Bazarr.</p>
+          <div class="links"><a href="https://github.com/abduznik/stackarr">Source</a></div>
         </article>
       </div>
     </section>
